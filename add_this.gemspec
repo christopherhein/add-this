@@ -5,11 +5,11 @@ require "add_this/version"
 Gem::Specification.new do |s|
   s.name        = "add_this"
   s.version     = AddThis::VERSION
-  s.authors     = ["Christopher Hein"]
-  s.email       = ["me@christopherhein.com"]
+  s.authors     = ["Christopher Hein", "Ryan Van Niekerk", "Nick Hodulik"]
+  s.email       = ["chris@generalthings.com", "rvanniekerk@generalthings.com", "nick@generalthings.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Simple API connector for getting analytic data from AddThis}
+  s.description = %q{Simple API connector for getting analytic data from AddThis}
 
   s.rubyforge_project = "add_this"
 
@@ -19,6 +19,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
+  s.add_runtime_dependency "typhoeus"
+  s.add_development_dependency "rspec"
+  s.add_development_dependency "guard"
+  s.add_development_dependency "guard-rspec"
   # s.add_runtime_dependency "rest-client"
 end

@@ -1,5 +1,3 @@
 require "add_this/version"
-
-module AddThis
-  # Your code goes here...
-end
+require "add_this/configuration"
+require "add_this/request"
