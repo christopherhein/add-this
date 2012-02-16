@@ -10,7 +10,7 @@ $ gem i add_this
 
 ## Usage
 
-With your userid and password define a configure block that defines them like so:
+With your user_id and password define a configure block that defines them like so:
 
 ### Global Config
 
@@ -27,9 +27,9 @@ end
 add_this = AddThis::Client.new(user_id: "generalthings", password: "awesome")
 ```
 
-For making request the api is quite simple it follows most of the current Add 
-This Structure of only broken by an underscore so [/shares/day](https://api.addthis.com/analytics/1.0/pub/shares/day.csv)
-would be `shares_day`
+For making requests to the api is quite simple it follows most of the current Add 
+This Structure for urls only broken by an underscore so [/shares/day](https://api.addthis.com/analytics/1.0/pub/shares/day.csv)
+would be a method called `shares_day`
 
 
 ## Example calls
@@ -37,7 +37,7 @@ would be `shares_day`
 You have two ways available to get data one on the AddThis class like so:
 
 ```ruby
-AddThis.get.shares_day
+AddThis.get.shares_url
 ```
 
 or by creating the client and requesting through that like so:
@@ -50,7 +50,7 @@ add_this.shares_url
 or passing query params you just need to provide a hash into that method as so:
 
 ```ruby
-AddThis.get.shares_day({service: "facebook_like"})
+AddThis.get.shares_url({service: "facebook_like"})
 ```
 
 
