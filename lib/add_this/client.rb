@@ -2,6 +2,14 @@
 #
 # builds a base class for all the api calls
 # to inherit from.
+#
+# @example
+#   add_this = AddThis::Client.new
+#   add_this.shares_url
+#
+# @example
+#   AddThis.get.shares_url
+#
 
 require "add_this/requests"
 
@@ -56,9 +64,11 @@ module AddThis
   end
   
   class << self
+    # attrs for storing the client object
     attr_accessor :client
   end
 
+  # defining the client object so you can make requests on the AddThis class
   def self.get
     self.client ||= Client.new
   end
