@@ -19,7 +19,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  s.add_runtime_dependency "typhoeus"
+  s.add_runtime_dependency "faraday"
+  s.add_runtime_dependency "faraday_middleware"
+  s.add_runtime_dependency "hashie"
   s.add_development_dependency "rspec"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"

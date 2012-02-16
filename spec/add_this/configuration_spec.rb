@@ -17,7 +17,7 @@ describe AddThis::Configuration do
     end
 
     it "should return configuration object" do
-      configure.should eq "hein"
+      configure.should eq true
     end
 
   end
